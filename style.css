@@ -62,7 +62,7 @@ code {
     border-radius: 0.5em;
 }
 
-@media only screen and (max-width: 815px) {
+@media only screen and (max-width: 600px) {
     /* For mobile phones: */
   
     #wrapper {
