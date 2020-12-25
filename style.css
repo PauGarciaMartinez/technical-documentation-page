@@ -1,14 +1,15 @@
 body {
     background-color: #fff;
     font-family: Helvetica, sans-serif;
+    color: rgb(107, 107, 107);
 }
 
 #wrapper {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: minmax(300px, auto) 1fr;
     grid-template-areas:
         "navbar main-doc";
-    grid-gap: 2em;
+    gap: 2em;
     margin: 0 auto;
     padding-left: 25px;
     padding-right: 50px;
@@ -17,9 +18,76 @@ body {
 #navbar {
     grid-area: navbar;
     position: fixed;
+    border-right: 1px solid gray;
+    padding-right: 3em;
+    height: 100%;
+}
+
+#navbar > a {
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    border-top: 1px solid gray;
+    color: rgb(107, 107, 107);
+    padding: 12px 0;
+    margin: 2em 0;
+}
+
+#navbar > a:hover {
+    color: black;
 }
 
 #main-doc {
     grid-area: main-doc;
+    padding-top: 2em;
+    line-height: 1.5em;
+    margin-right: 3em;
+    padding-bottom: 5em;
 }
 
+header {
+    font-size: 1.7em;
+    font-weight: 400;
+    padding: 1em 0;
+    color: black;
+}
+
+code {
+    background-color:rgb(243, 243, 243);
+    padding: 1em;
+    margin-left: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 0.5em;
+}
+
+@media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+  
+    #wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+        margin: 0 auto;
+        padding-left: 25px;
+        padding-right: 10px;
+    }
+
+    #navbar {
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-height: 275px;
+      border: none;
+      z-index: 1;
+    }
+  
+    #main-doc {
+      margin-left: 0px;
+      margin-top: 700px;
+    }
+  }
