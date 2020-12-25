@@ -1,0 +1,25 @@
+body {
+    background-color: #fff;
+    font-family: Helvetica, sans-serif;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas:
+        "navbar main-doc";
+    grid-gap: 2em;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 50px;
+}
+
+#navbar {
+    grid-area: navbar;
+    position: fixed;
+}
+
+#main-doc {
+    grid-area: main-doc;
+}
+
